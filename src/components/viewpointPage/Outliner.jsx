@@ -18,6 +18,7 @@ class Outliner extends React.Component {
     this.state = { };
     this.changing = false;
     this.topicTree = new TopicTree({});
+    console.log('salut');
   }
 
   render() {
