@@ -1,5 +1,8 @@
 name: Acceptance tests
-on: push
+on: 
+  push:
+    branches:
+      - test-workflow
 jobs:
   test:
     runs-on: ubuntu-latest
