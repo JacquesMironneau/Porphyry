@@ -45,6 +45,6 @@ Alors("l'utilisateur est redirigé vers la page d'édition de l'item {string}") 
   expect(page).to have_content item
 end
 
-Alors('L’utilisateur n’est pas connecté') do
+Alors("L’utilisateur n’est pas connecté") do
   expect(page).to have_content "Se connecter..."
 end
