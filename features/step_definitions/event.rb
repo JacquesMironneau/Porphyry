@@ -57,3 +57,11 @@ Quand("l'utilisateur choisit l'item {string} dans le bloc Items ayant le même n
   end
 end
 
+Quand("{string} souhaite s'enregistrer comme contributeur en tant que {string} avec le mot de passe {string}") do |mail, login, password|
+  click_on "S'enregistrer..."
+  expect(page).to have_content("Formulaire d'inscription")
+  fill_in placeholder: "E-mail", with: mail
+  fill_in placeholder: "nom d'utilisateur", with: login
+  fill_in placeholder: 'mot de passe', with: password
+  click_on "S'enregistrer"
+end

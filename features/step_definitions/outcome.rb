@@ -35,3 +35,16 @@ end
 Alors("la page contient {string}") do |localization|
   expect(page).to have_content localization
 end
+
+
+Alors('l’utilisateur {string} est connecté') do |login|
+  expect(page).to have_content login
+end
+
+Alors("l'utilisateur est redirigé vers la page d'édition de l'item {string}") do |item|
+  expect(page).to have_content item
+end
+
+Alors('L’utilisateur n’est pas connecté') do
+  expect(page).to have_content "Se connecter..."
+end
